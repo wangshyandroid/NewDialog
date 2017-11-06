@@ -30,8 +30,7 @@ public class ActionSheetDialog {
     private DisplayMetrics outMetrics;
 
     public ActionSheetDialog(Context context) {
-        wm = (WindowManager) context
-                .getSystemService(Context.WINDOW_SERVICE);
+        wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         outMetrics = new DisplayMetrics();
         wm.getDefaultDisplay().getMetrics(outMetrics);
         this.context = context;
