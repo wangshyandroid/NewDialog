@@ -51,7 +51,7 @@ public class ActionSheetDialog {
             @Override
             public void onClick(View v) {
                 if (itemClickListener != null) {
-                    itemClickListener.onClick(SheetItemColor.Lift);
+                    itemClickListener.onClick(EnumCheck.Lift);
                     dialog.dismiss();
                 }
             }
@@ -60,7 +60,7 @@ public class ActionSheetDialog {
             @Override
             public void onClick(View v) {
                 if (itemClickListener != null) {
-                    itemClickListener.onClick(SheetItemColor.Right);
+                    itemClickListener.onClick(EnumCheck.Right);
                     dialog.dismiss();
                 }
             }
@@ -75,6 +75,7 @@ public class ActionSheetDialog {
     }
 
     private void NewDialog(View view) {
+//        dialog = new Dialog(context, R.style.AlertDialogStyle);
         dialog = new Dialog(context, R.style.ActionSheetDialogStyle);
         dialog.setContentView(view);
         Window dialogWindow = dialog.getWindow();
@@ -116,13 +117,5 @@ public class ActionSheetDialog {
 
     public void dismiss() {
         dialog.dismiss();
-    }
-
-    public interface OnSheetItemClickListener {
-        void onClick(SheetItemColor which);
-    }
-
-    public enum SheetItemColor {
-        Lift, Right;
     }
 }

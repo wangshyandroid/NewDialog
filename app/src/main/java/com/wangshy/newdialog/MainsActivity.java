@@ -9,10 +9,6 @@ import android.view.View;
  * @author wangshy
  */
 public class MainsActivity extends AppCompatActivity {
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +20,30 @@ public class MainsActivity extends AppCompatActivity {
                 .builder()
                 .setTitle("头部")
                 .setBody("科技化开会就")
-                .setOnCheckListener(new ActionSheetDialog.OnSheetItemClickListener() {
+                .setOnCheckListener(new OnSheetItemClickListener() {
                     @Override
-                    public void onClick(ActionSheetDialog.SheetItemColor which) {
-                        if (which == ActionSheetDialog.SheetItemColor.Lift) {
-                            Log.e("MainsActivity", "---wangshy---->>>> onClick(MainsActivity.java:25)" + which);
-                        } else if (which == ActionSheetDialog.SheetItemColor.Right) {
-                            Log.e("MainsActivity", "---wangshy---->>>> onClick(MainsActivity.java:27)" + which);
+                    public void onClick(EnumCheck which) {
+                        if (which == EnumCheck.Lift) {
+                            Log.e("MainsActivity", "---wangshy---->>>> onClick(MainsActivity.java:40)" + which);
+                        } else {
+                            Log.e("MainsActivity", "---wangshy---->>>> onClick(MainsActivity.java:43)" + which);
+                        }
+                    }
+                }).show();
+
+    }
+
+    public void showDialog(View v) {
+        new AlertDialog(this)
+                .builder()
+                .setMsg("我身体，咿呀咿呀咦~~~")
+                .setOnCheckListener(new OnSheetItemClickListener() {
+                    @Override
+                    public void onClick(EnumCheck which) {
+                        if (which == EnumCheck.Lift) {
+                            Log.e("MainsActivity", "---wangshy---->>>> onClick(MainsActivity.java:40)" + which);
+                        } else {
+                            Log.e("MainsActivity", "---wangshy---->>>> onClick(MainsActivity.java:43)" + which);
                         }
                     }
                 }).show();

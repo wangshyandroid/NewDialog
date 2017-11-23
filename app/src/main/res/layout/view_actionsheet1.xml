@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/boby_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="27dp"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="27dp"
+            android:text="使用字体？"
+            android:textColor="#3f3f3f"
+            android:textSize="19sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/drop_out_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="#c23333"
+                android:gravity="center"
+                android:text="退出"
+                android:textColor="#929292"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/agree_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="#1fb936"
+                android:gravity="center"
+                android:text="同意"
+                android:textColor="#929292"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
